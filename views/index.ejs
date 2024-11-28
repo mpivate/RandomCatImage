@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Cat Images</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Cat Images</h1>
+        <div class="buttons">
+            <a href="/" class="btn">Get 1 Random Cat</a>
+            <a href="/ten-cats" class="btn">Get 10 Random Cats</a>
+        </div>
+        <div class="image-container">
+            <% if (catImage) { %>
+                <img src="<%= catImage %>" alt="Random Cat">
+            <% } %>
+            <% if (catImages) { %>
+                <% catImages.forEach(image => { %>
+                    <img src="<%= image %>" alt="Random Cat">
+                <% }); %>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
